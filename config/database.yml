@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: Password1!
   host: localhost
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: lugnuts_production
-  username: lugnuts
-  password: <%= ENV['LUGNUTS_DATABASE_PASSWORD'] %>
+  # username: lugnuts
+  # password: <%= ENV['LUGNUTS_DATABASE_PASSWORD'] %>
