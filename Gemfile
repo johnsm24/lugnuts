@@ -77,3 +77,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 # AWS - Amazon S3 for Active Storage uploads
 gem "aws-sdk-s3", require: false
+
+# Ruby does not recognize composite primary keys, 
+# so this gem is needed for Payments and Orderdetails tables
+gem 'composite_primary_keys', '~> 12.0', '>= 12.0.2'
