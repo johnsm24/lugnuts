@@ -45,16 +45,48 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+    # A browser automation framework and ecosystem
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  # Keep your Selenium WebDrivers updated automatically
+  gem 'webdrivers', require: !ENV['SELENIUM_REMOTE_URL']
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+<<<<<<< HEAD
 # Rails Admin
 gem 'rails_admin', '~> 2.0'
 # CanCanCan gem
 gem 'cancancan'
 # Devise
 gem 'devise'
+=======
+
+# Bootstrap
+gem 'bootstrap', '~> 4.4', '>= 4.4.1'
+
+# User auth
+gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'rails_admin', '~> 2.0', '>= 2.0.1'
+gem 'cancancan', '~> 3.0', '>= 3.0.2'
+
+# Pagination
+# https://ddnexus.github.io/pagy/how-to.html
+# https://gorails.com/episodes/pagination-with-pagy-gem?autoplay=1
+gem 'pagy', '~> 3.7', '>= 3.7.3'
+
+# Sendgrid - email
+gem 'sendgrid-actionmailer', '~> 3.0'
+
+# Environment variable security
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+
+# AWS - Amazon S3 for Active Storage uploads
+gem "aws-sdk-s3", require: false
+
+# Ruby does not recognize composite primary keys, 
+# so this gem is needed for Payments and Orderdetails tables
+gem 'composite_primary_keys', '~> 12.0', '>= 12.0.2'
+>>>>>>> fee260cacc738e5b7e5482c2cbdba7c1675d5f73

@@ -14,13 +14,20 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
+<<<<<<< HEAD
   password: test
+=======
+  password: Password1!
+>>>>>>> fee260cacc738e5b7e5482c2cbdba7c1675d5f73
   host: localhost
 
 development:
   <<: *default
   database: classicmodels
+<<<<<<< HEAD
 
+=======
+>>>>>>> fee260cacc738e5b7e5482c2cbdba7c1675d5f73
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,6 +57,6 @@ test:
 #
 production:
   <<: *default
-  database: lugnuts_production
-  username: lugnuts
-  password: <%= ENV['LUGNUTS_DATABASE_PASSWORD'] %>
+  database: heroku_8a32f3253da571c
+  # username: lugnuts
+  # password: <%= ENV['LUGNUTS_DATABASE_PASSWORD'] %>

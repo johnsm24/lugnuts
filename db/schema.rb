@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_10_30_053752) do
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> fee260cacc738e5b7e5482c2cbdba7c1675d5f73
 
   create_table "customers", primary_key: "customerNumber", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "customerName", limit: 50, null: false
